@@ -1,22 +1,17 @@
 package AppClass;
 
 import java.util.Scanner;
+import java.util.stream.IntStream;
 
 public class TriangularNumber {
 
-    public void testit(int a , int b , int c)
+    public boolean testit(int angle1 , int angle2 , int angle3)
     {
-
-        if ((a*a)+(b*b)==(c*c)) {
-            System.out.println("true");
-        }
-        else {
-            System.out.println("false");
-
-        }
-
-
+         if (IntStream.of(angle1,angle2,angle3).sum()==90) {
+             return true;
+         }
+         else {
+             return false;
+         }
     }
-
-
 }
